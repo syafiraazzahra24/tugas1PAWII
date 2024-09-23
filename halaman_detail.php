@@ -44,9 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail KRS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         body {
-            background-color: #d1c4e9; /* Warna latar ungu muda */
+            background-color: #e8eaf6; /* Warna latar ungu muda */
         }
         .progress {
             height: 30px;
@@ -58,12 +59,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #ede7f6;
             transform: scale(1.05);
         }
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .bg-light-custom {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 40px;
+        }
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <div class="bg-light p-5 rounded">
-            <h2>Detail Pemilihan KRS</h2>
+        <div class="bg-light-custom p-5 rounded">
+            <h2 class="text-center mb-4">Detail Pemilihan KRS</h2>
             
             <!-- Progress Bar -->
             <div class="progress mb-4">
@@ -75,16 +84,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p><strong>NPM:</strong> <?php echo htmlspecialchars($_SESSION['npm']); ?></p>
                 <p><strong>Semester:</strong> <?php echo htmlspecialchars($_SESSION['semester']); ?></p>
                 <p><strong>Mata Kuliah yang Dipilih:</strong></p>
-                <ul class="list-group">
+                <ul class="list-group mb-4">
                     <?php foreach ($_SESSION['courses'] as $course): ?>
                         <li class="list-group-item course-item">
                             <i class="bi bi-book"></i> <?php echo htmlspecialchars($course); ?>
                         </li>
                     <?php endforeach; ?>
                 </ul>
+                <a href="form_design.php" class="btn btn-primary"><i class="bi bi-pencil-square"></i> Ubah Pilihan Mata Kuliah</a>
             <?php else: ?>
                 <!-- Modal Popup for Errors -->
-                <div class="modal" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+                <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -95,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 Terdapat bentrok jadwal mata kuliah atau format data tidak valid! Silakan periksa kembali.
                             </div>
                             <div class="modal-footer">
-                                <a href="form_design.php" class="btn btn-danger">Kembali Pilih Mata Kuliah</a>
+                                <a href="form_design.php" class="btn btn-danger"><i class="bi bi-arrow-left"></i> Kembali Pilih Mata Kuliah</a>
                             </div>
                         </div>
                     </div>
