@@ -15,3 +15,9 @@
             background-color: #f1f8e9; /* Warna latar hijau muda */
         }
     </style>
+    </head>
+<body>
+    <div class="container mt-5">
+        <div class="bg-light p-5 rounded">
+            <h2 class="mb-4">Form Registrasi Pemilihan Mata Kuliah</h2>
+            <form action="form_design.php" method="POST">
