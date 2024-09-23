@@ -21,3 +21,15 @@
         <div class="bg-light p-5 rounded">
             <h2 class="mb-4">Form Registrasi Pemilihan Mata Kuliah</h2>
             <form action="form_design.php" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama Mahasiswa</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="NPM" class="form-label">NPM</label>
+                    <input type="text" class="form-control" id="NPM" name="NPM" required>
+                </div>
+                <div class="mb-3">
+                    <label for="semester" class="form-label">Semester</label>
+                    <input type="number" class="form-control" id="semester" name="semester" required>
+                </div>
