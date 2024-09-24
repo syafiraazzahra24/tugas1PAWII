@@ -96,4 +96,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .tooltip-arrow::before {
             border-top-color: #00796b !important;
         }
-   
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-light-custom p-5">
+            <h2 class="text-center mb-4 text-uppercase fw-bold text-secondary">Detail Pemilihan KRS</h2>
+            
+            <!-- Progress Bar -->
+            <div class="progress mb-4">
+                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Tahap Akhir</div>
+            </div>
+
+            <?php if ($valid): ?>
+                <div class="mb-4">
+                    <p><strong>Nama:</strong> <?php echo htmlspecialchars($_SESSION['name']); ?></p>
+                    <p><strong>NPM:</strong> <?php echo htmlspecialchars($_SESSION['npm']); ?></p>
+                    <p><strong>Semester:</strong> <?php echo htmlspecialchars($_SESSION['semester']); ?></p>
+                </div>
+                
