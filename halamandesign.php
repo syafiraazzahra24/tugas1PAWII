@@ -29,6 +29,19 @@
                         <option value="8">Semester 8</option>
                     </select>
                 </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Mata Kuliah Tersedia</label>
+                    <select class="form-select" name="courses[]" multiple required id="courses">
+                        <!-- Daftar mata kuliah akan diisi secara dinamis -->
+                    </select>
+                    <div class="form-text">Pilih lebih dari satu mata kuliah jika diperlukan.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
     
 </body>
 </html>
