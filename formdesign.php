@@ -85,4 +85,23 @@
                 "Seminar Proposal - Kamis 14:00",
             ]
         };
+        
+        // Ketika semester dipilih, update daftar mata kuliah
+        semesterSelect.addEventListener('change', function() {
+            const selectedSemester = this.value;
+            courseSelect.innerHTML = ''; // Kosongkan pilihan sebelumnya
+
+            if (mataKuliah[selectedSemester]) {
+                mataKuliah[selectedSemester].forEach(course => {
+                    const option = document.createElement('option');
+                    option.value = course;
+                    option.textContent = course;
+                    courseSelect.appendChild(option);
+                });
+            }
+        });
+
+        // Inisialisasi dengan semester pertama
+        semesterSelect.dispatchEvent(new Event('change'));
+    </script>
 </body>
