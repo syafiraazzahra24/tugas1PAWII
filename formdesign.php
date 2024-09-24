@@ -53,6 +53,36 @@
                 "Sistem Basis Data - Senin 10:00",
                 "Pemrograman Berorientasi Objek 1 - Selasa 12:00",
                 "Algoritma Struktur Data - Rabu 08:00",
+            ],
+            3: [
+                "Basis Data Terapan - Kamis 14:00",
+                "Rekayasa Perangkat Lunak - Jumat 10:00",
+                "Riset Operasi - Selasa 08:00",
+            ],
+            4: [
+                "Sistem Komputasi Paralel - Senin 08:00",
+                "Komputasi Aman- Rabu 10:00",
+                "Forensik Komputer - Kamis 14:00",
+            ],
+            5: [
+                "Pemrograman Aplikasi Bergerak - Senin 14:00",
+                "Gudang Data - Selasa 12:00",
+                "Komputasi Hijau - Jumat 08:00",
+            ],
+            6: [
+                "Pengembangan Aplikasi Web 2 - Selasa 08:00",
+                "Manajemen Proyek - Kamis 12:00",
+                "Matematika Diskrit - Jumat 10:00",
+            ],
+            7: [
+                "Sistem Terdistribusi - Senin 09:00",
+                "Analisis Big Data - Rabu 13:00",
+                "Blockchain - Jumat 11:00",
+            ],
+            8: [
+                "Tugas Akhir - Senin 08:00",
+                "Audit Komputer - Selasa 09:00",
+                "Seminar Proposal - Kamis 14:00",
             ]
         };
 </body>
