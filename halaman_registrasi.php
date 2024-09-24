@@ -17,7 +17,15 @@
     </style>
     </head>
 <body>
-   
+<div class="container mt-5">
+        <div class="bg-light p-5 rounded">
+            <h2 class="mb-4">Form Registrasi Pemilihan Mata Kuliah</h2>
+            <form action="form_design.php" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama Mahasiswa</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
