@@ -14,6 +14,16 @@
             background-color: #E6E6FA; 
         }
     </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center bg-light p-5 rounded">
+            <h1 class="mb-4">Sistem Pengisian KRS</h1>
+            <p>Selamat datang di sistem pengisian KRS online.</p>
+            <a href="form_registrasi.php" class="btn btn-primary btn-lg">Mulai Pengisian KRS</a>
+        </div>
+    </div>
+
 
     
 </body>
