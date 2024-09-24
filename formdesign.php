@@ -36,4 +36,23 @@
             </form>
         </div>
     </div>
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript untuk mengubah mata kuliah berdasarkan semester -->
+    <script>
+        const semesterSelect = document.querySelector('select[name="semester"]');
+        const courseSelect = document.querySelector('#courses');
+
+        const mataKuliah = {
+            1: [
+                "Pengantar Sistem Informasi - Senin 08:00",
+                "Matematika Dasar - Selasa 10:00",
+                "Bahasa Inggris - Rabu 14:00",
+            ],
+            2: [
+                "Sistem Basis Data - Senin 10:00",
+                "Pemrograman Berorientasi Objek 1 - Selasa 12:00",
+                "Algoritma Struktur Data - Rabu 08:00",
+            ]
+        };
 </body>
