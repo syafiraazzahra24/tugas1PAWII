@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pemilihan Mata Kuliah</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <style>
         body {
-            background-color: #ffecb3; /* Warna latar kuning muda */
+            background-color: #ffecb3; 
         }
     </style>
 </head>
@@ -18,7 +16,6 @@
         <div class="bg-light p-5 rounded">
             <h2 class="mb-4">Pilih Mata Kuliah</h2>
             <form action="halaman_detail.php" method="POST">
-                <!-- Tambahkan Pilihan Semester -->
                 <div class="mb-3">
                     <label class="form-label">Pilih Semester</label>
                     <select class="form-select" name="semester" required>
@@ -32,13 +29,22 @@
                         <option value="8">Semester 8</option>
                     </select>
                 </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Mata Kuliah Tersedia</label>
+                    <select class="form-select" name="courses[]" multiple required id="courses">
+                        <!-- Daftar mata kuliah akan diisi secara dinamis -->
+                    </select>
+                    <div class="form-text">Pilih lebih dari satu mata kuliah jika diperlukan.</div>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
-     <!-- Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript untuk mengubah mata kuliah berdasarkan semester -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
         const semesterSelect = document.querySelector('select[name="semester"]');
         const courseSelect = document.querySelector('#courses');
@@ -86,7 +92,7 @@
             ]
         };
 
-        // Ketika semester dipilih, update daftar mata kuliah
+
         semesterSelect.addEventListener('change', function() {
             const selectedSemester = this.value;
             courseSelect.innerHTML = ''; // Kosongkan pilihan sebelumnya
@@ -101,8 +107,7 @@
             }
         });
 
-        // Inisialisasi dengan semester pertama
-        semesterSelect.dispatchEvent(new Event('change'));
+semesterSelect.dispatchEvent(new Event('change'));
     </script>
 </body>
 </html>
