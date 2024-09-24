@@ -33,7 +33,10 @@
                     <label for="semester" class="form-label">Semester</label>
                     <input type="number" class="form-control" id="semester" name="semester" required>
                 </div>
-               
+                <button type="submit" class="btn btn-primary">Lanjut Pilih Mata Kuliah</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
