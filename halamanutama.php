@@ -12,7 +12,8 @@
             background-color: #E6E6FA; /* Warna ungu muda (lilac) */
         }
     </style>
-    <body>
+</head>
+<body>
     <div class="container mt-5">
         <div class="text-center bg-light p-5 rounded">
             <h1 class="mb-4">Sistem Pengisian KRS</h1>
@@ -22,9 +23,5 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    
-</head>
-<body>
-    
 </body>
 </html>
