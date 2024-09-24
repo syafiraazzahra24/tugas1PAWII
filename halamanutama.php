@@ -20,6 +20,7 @@
             <a href="form_registrasi.php" class="btn btn-primary btn-lg">Mulai Pengisian KRS</a>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     
 </head>
