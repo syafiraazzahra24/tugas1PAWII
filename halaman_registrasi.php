@@ -25,6 +25,10 @@
                     <label for="name" class="form-label">Nama Mahasiswa</label>
                     <input type="text" class="form-control" id="name" name="name" required>
                 </div>
+                <div class="mb-3">
+                    <label for="NPM" class="form-label">NPM</label>
+                    <input type="text" class="form-control" id="NPM" name="NPM" required>
+                </div>
                 
 
     <!-- Bootstrap JS -->
