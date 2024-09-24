@@ -105,6 +105,28 @@
                 });
             }
         });
-    
+
+semesterSelect.dispatchEvent(new Event('change'));
+    </script>
 </body>
 </html>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Tangkap data semester dan mata kuliah
+    $semester = $_POST['semester'] ?? '';
+    $courses = $_POST['courses'] ?? [];
+
+    if (!empty($semester) && !empty($courses)) {
+        // Tampilkan data yang dipilih
+        echo "<h2>Detail Pemilihan Mata Kuliah</h2>";
+        echo "Semester: " . htmlspecialchars($semester) . "<br>";
+        echo "Mata Kuliah yang Dipilih:<br>";
+        echo "<ul>";
+        foreach ($courses as $course) {
+            echo "<li>" . htmlspecialchars($course) . "</li>";
+        }
+        echo "</ul>";
+    } else {
+        echo "Data tidak lengkap!";
+    }
+}
