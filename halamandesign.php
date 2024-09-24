@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-<div class="container mt-5">
+    <div class="container mt-5">
         <div class="bg-light p-5 rounded">
             <h2 class="mb-4">Pilih Mata Kuliah</h2>
             <form action="halaman_detail.php" method="POST">
@@ -42,6 +42,7 @@
             </form>
         </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
