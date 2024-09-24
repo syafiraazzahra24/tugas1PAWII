@@ -114,4 +114,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <p><strong>NPM:</strong> <?php echo htmlspecialchars($_SESSION['npm']); ?></p>
                     <p><strong>Semester:</strong> <?php echo htmlspecialchars($_SESSION['semester']); ?></p>
                 </div>
-                
+                <p class="fw-bold">Mata Kuliah yang Dipilih:</p>
+                <ul class="list-group mb-4">
+                    <?php foreach ($_SESSION['courses'] as $course): ?>
+                        <li class="list-group-item course-item d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" title="Klik untuk info lebih lanjut!">
+                            <i class="bi bi-book-fill me-2 text-primary"></i> 
+                            <?php echo htmlspecialchars($course); ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <div class="d-grid gap-2">
+                    <a href="form_design.php" class="btn btn-primary btn-lg"><i class="bi bi-pencil-square"></i> Ubah Pilihan Mata Kuliah</a>
+                </div>
+            <?php else: ?>
+                <!-- Modal Popup for Errors -->
+                <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="errorModalLabel">Kesalahan Jadwal</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-danger">
+                                Terdapat bentrok jadwal mata kuliah atau format data tidak valid! Silakan periksa kembali.
+                            </div>
+                            <div class="modal-footer">
+                                <a href="form_design.php" class="btn btn-danger"><i class="bi bi-arrow-left"></i> Kembali Pilih Mata Kuliah</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // Automatically open modal on error
+                    var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                    errorModal.show();
+                </script>
+
+                <div class="mb-4">
+                    <p><strong>Nama:</strong> <?php echo htmlspecialchars($_SESSION['name']); ?></p>
+                    <p><strong>NPM:</strong> <?php echo htmlspecialchars($_SESSION['npm']); ?></p>
+                    <p><strong>Semester:</strong> <?php echo htmlspecialchars($_SESSION['semester']); ?></p>
+                </div>
+                <p class="fw-bold">Mata Kuliah yang Dipilih:</p>
+                <ul class="list-group">
+                    <?php foreach ($_SESSION['courses'] as $course): ?>
+                        <li class="list-group-item course-item d-flex align-items-center">
+                            <i class="bi bi-book-fill me-2 text-danger"></i> 
+                            <?php echo htmlspecialchars($course); ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+        </div>
+    </div>
+    
+   
+</body>
+</html>
